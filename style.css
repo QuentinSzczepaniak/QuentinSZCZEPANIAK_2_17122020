@@ -3,18 +3,16 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-.principal {
-  max-width: 1440px;
-  margin: auto;
-  padding: 0 2rem;
-  box-sizing: border-box;
 
-}
 
 body {
   font-family: 'Raleway', 'Calibri', Sans serif, monospace;
   margin: 0;
+  max-width: 1440px;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
+
 
 .header {
   grid-template-columns: auto 1fr auto auto;
@@ -24,6 +22,14 @@ body {
   max-width: 1440px;
   margin: auto;
 }
+
+@media all and (max-width: 480px) {
+  .header {
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 50px 100px;
+   width: 100%;
+   grid-template-areas:  "logo headerinscription headernavlien ";
+  }}
 
 .headerimage {
   grid-area: logo;
@@ -37,6 +43,11 @@ body {
   grid-area: headernavlien;
 }
 
+@media all and (max-width: 480px) {
+  .headernav {
+    grid-area: 2 / 1 / 3 / 3;
+  }}
+
 .headernavlien {
   text-align: center;
   padding: 2rem;
@@ -45,6 +56,22 @@ body {
   border-top-style: solid;
   text-decoration: transparent;
 }
+
+@media all and (max-width: 480px) {
+  .headernavlien1 {
+    width: 100%;
+    border-top: none;
+    border-bottom: 3px solid #0065FC;
+    grid-area: 2 / 1 / 3 / 4;
+  }}
+
+@media all and (max-width: 480px) {
+  .headernavlien2 {
+    width: 100%;
+    border-top: none;
+    border-bottom: 3px solid #0065FC;
+    grid-area: 2 / 2 / 3 / 3;
+  }}
 
 .headerinscription {
   grid-area: headerinscription;
@@ -55,13 +82,18 @@ body {
   text-decoration: transparent;
 }
 
+@media all and (max-width: 480px) {
+  .headerinscription {
+
+}}
+
 .rechercheheadertitre {
-  margin-bottom: 0rem;
+  margin-bottom: 0;
   font-size: 2rem;
 }
 
 .rechercheheadersoustitre {
-  margin-top: 0rem;
+  margin-top: 0;
 }
 .rechercheform {
   max-width: 100%;
@@ -69,6 +101,10 @@ body {
   overflow: hidden;
 }
 
+@media all and (max-width: 480px) {
+  .rechercheform {
+    width: 100%;
+  }}
 
 .iconmapmarker {
   background-color: #F2F2F2;
@@ -89,6 +125,18 @@ body {
   cursor: pointer;
 }
 
+  .rechercheformdemandeinput::before {
+    content:"rechercher";
+    color: white;
+  }
+
+@media all and (max-width: 480px) {
+  .rechercheformdemandeinput::before {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free","Sans serif";
+    font-weight: bold;
+  }}
+
 .rechercheforminput {
   border-right: 0;
   border-left: 0;
@@ -107,88 +155,60 @@ body {
   align-content: space-around;
 }
 
+@media all and (max-width: 480px) {
+  .filtres {
+    display: block;
+  }}
+
 .recherchefiltrestitre {
   width: 10%;
   display: flex;
   align-items: center;
 }
 
+
 div.recherchefiltresfiltre {
   font-weight: bold;
   font-size: 20px;
   border: 2px solid #d9d9d9;
   width: fit-content;
-  padding: 0rem 0.5rem;
+  padding: 0 0.5rem;
   border-radius: 1.5rem;
   align-items: center;
-  margin-left: 0rem;
+  margin-left: 0;
   margin-right: 1.5rem;
   display: flex;
-  margin-top: 1rem
+  margin-top: 1rem;
+}
+div.recherchefiltresfiltre::before{
+  font-weight: bold;
+  color: blue;
+  width: 2rem;
+  height: 2rem;
+  background-color: #DEEBFF;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-family: "Font Awesome 5 Free", sans-serif;
+  padding: 0.5rem 0.5rem;
+  margin-left: -1rem;
+  display: flex;
 }
 
 .economique::before {
   content: "\f53a";
-  font-weight: bold;
-  color: blue;
-  width: 2rem;
-  height: 2rem;
-  background-color: #DEEBFF;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-family: "Font Awesome 5 Free";
-  padding: 0.5rem 0.5rem;
-  margin-left: -1rem;
-  display: flex;
 }
 
 .familial::before {
   content: "\f1ae";
-  font-weight: bold;
-  color: blue;
-  width: 2rem;
-  height: 2rem;
-  background-color: #DEEBFF;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-family: "Font Awesome 5 Free";
-  padding: 0.5rem 0.5rem;
-  margin-left: -1rem;
-  display: flex;
 }
 
 .romantique::before {
   content: "\f004";
-  font-weight: bold;
-  color: blue;
-  width: 2rem;
-  height: 2rem;
-  background-color: #DEEBFF;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-family: "Font Awesome 5 Free";
-  padding: 0.5rem 0.5rem;
-  margin-left: -1rem;
-  display: flex;
 }
 
 .animaux::before {
   content: "\f6d3";
-  font-weight: bold;
-  color: blue;
-  width: 2rem;
-  height: 2rem;
-  background-color: #DEEBFF;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  font-family: "Font Awesome 5 Free";
-  padding: 0.5rem 0.5rem;
-  margin-left: -1rem;
-  display: flex;
 }
 .animaux {
   width: 100%;
@@ -196,7 +216,7 @@ div.recherchefiltresfiltre {
 
 .rechercheresultattext::before {
   content: "\f129";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: bold;
   color: blue;
   border: 2px solid #d9d9d9;
@@ -210,9 +230,29 @@ div.recherchefiltresfiltre {
   margin-bottom: 50px;
 }
 
-section.tableau {
+@media all and (max-width: 480px) {
+  .rechercheresultattext {
+    display:block;
+  }}
+
+main.tableau {
   display: flex;
   justify-content: space-evenly;
+}
+@media all AND (max-width:480px){
+  main.tableau {
+    flex-direction: column-reverse;
+  }
+  main.tableau section{
+    width:100%;
+  }
+  section.Hebergement {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  article.tableauhebergement {
+    width: 100%;
+  }
 }
 
 h2.titrehebergement {
@@ -239,13 +279,34 @@ section.populaire {
 
 article.tableauhebergement {
   width: 30%;
-  background-color: #DEEBFF;
+  background-color: white;
   border-radius: 1rem;
   margin-top: 15px;
 }
 
+article.tableaupopulaire {
+  width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  margin-top: 15px;
+}
+
+@media all AND (max-width:480px){
+  section.Hebergement {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  article.tableauhebergement {
+    width: 80%;
+  }
+  article.tableaupopulaire {
+    width: 80%;
+    margin-left: 25px;
+  }
+}
+
 .etoiles {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: bold;
 }
 
@@ -280,25 +341,162 @@ p.afficherplus {
   width: 100%;
 }
 
-article.tableaupopulaire {
-  width: 100%;
-  background-color: #DEEBFF;
-  border-radius: 1rem;
-  margin-top: 15px;
-}
-
 .imagehebergement {
   height: 5rem;
   width: 100%;
   border-radius: 1rem 1rem 0 0;
-  margin-bottom: 0rem;
+  margin-bottom: 0;
+}
+
+.imagepopulaire {
+  height: 90%;
+  width: 90%;
+  object-fit: cover;
+  grid-area: 1 / 1 / 4 / 2;
+  border-radius: 1rem 0 0 1rem;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 h1.titrehotel {
-  margin-top: 0rem;
+  margin-top: 0;
 
 }
 
+.gridpopulaire {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 50px);
+}
+
+.titrepopulaire {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.textepopulaire {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.etoilespopulaire {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.activite {
+  margin-bottom: 50px;
+}
+
+.activiteamarseille {
+  margin-top: 50px;
+}
+
+.conteneurgrid {
+  display:grid;
+  grid-template-columns: 1fr 15px 1fr 15px 1fr 15px 1fr;
+  grid-template-rows: 14rem repeat(3, 2rem) 14rem;
+}
+
+.imageactivite {
+  height: 85%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.titreactivite {
+  margin: 0;
+  justify-content: center;
+}
+
+.vieuxport {
+  grid-area: 1 / 1 / 6 / 2;
+}
+
+.fortdepomegues {
+  grid-area: 1 / 3 / 4 / 4;
+}
+
+.iledufrioul {
+  grid-area: 5 / 3 / 6 / 4;
+}
+
+.parcnationaldescalanques {
+  grid-area: 1 / 5 / 6 / 5;
+}
+
+.notredamedelagarde {
+  grid-area: 1 / 7 / 2 / 8;
+}
+
+.parclongchamp {
+  grid-area: 3 / 7 / 6 / 8;
+}
+
+.artactivite {
+  background-color: transparent;
+  box-shadow: 0 0 20px #999999;
+  border-radius: 1rem 1rem 1rem 1rem;
+}
+
+@media all AND (max-width:480px){
+  .conteneurgrid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .imageactivite {
+    width: 100%;
+    height: 200px;
+  }
+  .artactivite {
+    margin-bottom: 10px;
+  }
+}
+
+footer {
+  background-color: #F2F2F2;
+  width: 100%;
+}
+
+.conteneurgridfooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.liensfooter {
+  text-decoration: transparent;
+  color: black;
+  display: grid;
+  margin-bottom: 20px;
+}
+
+.footercolonne1 {
+  grid-column: 1 / 2;
+}
+
+.footercolonne2 {
+  grid-column: 2 / 3;
+}
+
+.footercolonne3 {
+  grid-column: 3 / 4;
+}
+
+@media all AND (max-width:480px){
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .titrefooter {
+    width: 100%;
+  }
+  .liensfooter {
+    width: 100%;
+  }
+  .conteneurgridfooter {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
 
 
