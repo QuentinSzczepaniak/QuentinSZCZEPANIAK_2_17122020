@@ -54,7 +54,7 @@ body {
   font-weight: 500;
   border-top: 3px blue ;
   border-top-style: solid;
-  text-decoration: transparent;
+  text-decoration: none;
 }
 
 @media all and (max-width: 480px) {
@@ -79,13 +79,8 @@ body {
   align-items: center;
   padding: 2rem;
   font-weight: 500;
-  text-decoration: transparent;
+  text-decoration: none;
 }
-
-@media all and (max-width: 480px) {
-  .headerinscription {
-
-}}
 
 .rechercheheadertitre {
   margin-bottom: 0;
@@ -133,7 +128,7 @@ body {
 @media all and (max-width: 480px) {
   .rechercheformdemandeinput::before {
     content: "\f002";
-    font-family: "Font Awesome 5 Free","Sans serif";
+    font-family: "Font Awesome 5 Free",Sans serif;
     font-weight: bold;
   }}
 
@@ -166,8 +161,7 @@ body {
   align-items: center;
 }
 
-
-div.recherchefiltresfiltre {
+a.recherchefiltresfiltre {
   font-weight: bold;
   font-size: 20px;
   border: 2px solid #d9d9d9;
@@ -179,10 +173,18 @@ div.recherchefiltresfiltre {
   margin-right: 1.5rem;
   display: flex;
   margin-top: 1rem;
+  text-decoration: none;
+  color: black;
 }
-div.recherchefiltresfiltre::before{
+
+a.recherchefiltresfiltre:hover {
+  color: #0065FC;
+  text-decoration: underline;
+}
+
+a.recherchefiltresfiltre::before{
   font-weight: bold;
-  color: blue;
+  color: #0065FC;
   width: 2rem;
   height: 2rem;
   background-color: #DEEBFF;
@@ -359,7 +361,7 @@ p.afficherplus {
   padding-bottom: 10px;
 }
 
-h1.titrehotel {
+h2.titrehotel {
   margin-top: 0;
 
 }
@@ -449,6 +451,7 @@ h1.titrehotel {
   }
   .artactivite {
     margin-bottom: 10px;
+    width: 100%;
   }
 }
 
