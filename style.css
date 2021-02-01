@@ -7,7 +7,7 @@ html {
 
 body {
   font-family: 'Raleway', 'Calibri', Sans serif, monospace;
-  margin: 0;
+  margin: 0 auto;
   max-width: 1440px;
   padding: 0 2rem;
   box-sizing: border-box;
@@ -23,7 +23,7 @@ body {
   margin: auto;
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 1025px) {
   .header {
    grid-template-columns: 50% 50%;
    grid-template-rows: 50px 100px;
@@ -43,7 +43,7 @@ body {
   grid-area: headernavlien;
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 1025px) {
   .headernav {
     grid-area: 2 / 1 / 3 / 3;
   }}
@@ -57,7 +57,7 @@ body {
   text-decoration: none;
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 1025px) {
   .headernavlien1 {
     width: 100%;
     border-top: none;
@@ -65,7 +65,7 @@ body {
     grid-area: 2 / 1 / 3 / 4;
   }}
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 1025px) {
   .headernavlien2 {
     width: 100%;
     border-top: none;
@@ -83,8 +83,8 @@ body {
 }
 
 .rechercheheadertitre {
-  margin-bottom: 0;
-  font-size: 2rem;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 
 .rechercheheadersoustitre {
@@ -96,7 +96,7 @@ body {
   overflow: hidden;
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 1025px) {
   .rechercheform {
     width: 100%;
   }}
@@ -121,11 +121,11 @@ body {
 }
 
   .rechercheformdemandeinput::before {
-    content:"rechercher";
+    content:"Rechercher";
     color: white;
   }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 1025px) {
   .rechercheformdemandeinput::before {
     content: "\f002";
     font-family: "Font Awesome 5 Free",Sans serif;
@@ -150,7 +150,7 @@ body {
   align-content: space-around;
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 1025px) {
   .filtres {
     display: block;
   }}
@@ -159,6 +159,7 @@ body {
   width: 10%;
   display: flex;
   align-items: center;
+
 }
 
 a.recherchefiltresfiltre {
@@ -178,8 +179,8 @@ a.recherchefiltresfiltre {
 }
 
 a.recherchefiltresfiltre:hover {
-  color: #0065FC;
-  text-decoration: underline;
+  color: red;
+  background: yellow;
 }
 
 a.recherchefiltresfiltre::before{
@@ -232,7 +233,7 @@ a.recherchefiltresfiltre::before{
   margin-bottom: 50px;
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 1025px) {
   .rechercheresultattext {
     display:block;
   }}
@@ -241,7 +242,7 @@ main.tableau {
   display: flex;
   justify-content: space-evenly;
 }
-@media all AND (max-width:480px){
+@media all AND (max-width:1025px){
   main.tableau {
     flex-direction: column-reverse;
   }
@@ -260,6 +261,7 @@ main.tableau {
 h2.titrehebergement {
   width: 100%;
   display: flex;
+  margin-left: 1.5rem;
 }
 
 section.Hebergement {
@@ -270,6 +272,12 @@ section.Hebergement {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+@media all AND (min-width:1025px) {
+  section.Hebergement {
+    margin-left: -3rem;
+  }
 }
 
 section.populaire {
@@ -283,14 +291,18 @@ article.tableauhebergement {
   width: 30%;
   background-color: white;
   border-radius: 1rem;
-  margin-top: 15px;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  box-shadow: 0 0 20px #999999;
+  height: 33%;
 }
 
 article.tableaupopulaire {
-  width: 100%;
+  width: 90%;
   background-color: white;
   border-radius: 1rem;
-  margin-top: 15px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 1rem;
 }
 
 @media all AND (max-width:480px){
@@ -300,6 +312,20 @@ article.tableaupopulaire {
   }
   article.tableauhebergement {
     width: 80%;
+  }
+  article.tableaupopulaire {
+    width: 80%;
+    margin-left: 25px;
+  }
+}
+
+@media all AND (min-width: 480px) and (max-width: 1025px){
+  section.Hebergement {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  article.tableauhebergement {
+    width: 50%;
   }
   article.tableaupopulaire {
     width: 80%;
@@ -344,10 +370,12 @@ p.afficherplus {
 }
 
 .imagehebergement {
-  height: 5rem;
-  width: 100%;
+  height: 8rem;
+  width: 90%;
   border-radius: 1rem 1rem 0 0;
   margin-bottom: 0;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
 .imagepopulaire {
@@ -361,9 +389,21 @@ p.afficherplus {
   padding-bottom: 10px;
 }
 
-h2.titrehotel {
-  margin-top: 0;
+h4.titrehotel {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
 
+p.phrasehotel {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.decalageetoile {
+  margin-left: 10px;
+  margin-bottom: 0;
 }
 
 .gridpopulaire {
@@ -384,6 +424,19 @@ h2.titrehotel {
   grid-area: 3 / 2 / 4 / 3;
 }
 
+h2.lespluspopulaires {
+  display: flex;
+  width: 100%;
+}
+
+h2.lespluspopulaires::after {
+  content: "\f201";
+  font-family: "Font Awesome 5 Free";
+  color: black;
+  position: sticky;
+  left: 100rem;
+}
+
 .activite {
   margin-bottom: 50px;
 }
@@ -394,8 +447,8 @@ h2.titrehotel {
 
 .conteneurgrid {
   display:grid;
-  grid-template-columns: 1fr 15px 1fr 15px 1fr 15px 1fr;
-  grid-template-rows: 14rem repeat(3, 2rem) 14rem;
+  grid-template-columns: 290px 54px 290px 54px 290px 54px 290px;
+  grid-template-rows: 14rem repeat(3, 3rem) 14rem;
 }
 
 .imageactivite {
@@ -406,8 +459,32 @@ h2.titrehotel {
 }
 
 .titreactivite {
-  margin: 0;
+  margin-left: 1rem;
   justify-content: center;
+  font-weight: bold;
+}
+
+.titrefortdepomegues {
+  margin-top: 10px;
+}
+
+.titreiledufrioul {
+  margin-top: 5px;
+}
+
+.titrenotredamedelagarde {
+  margin-top: 5px;
+}
+
+.titreparclongchamp {
+  margin-top: 10px;
+}
+
+.titrevieuxport {
+  margin-top: 5px;
+}
+.titreparcnationaldescalanques {
+  margin-top: 5px
 }
 
 .vieuxport {
@@ -440,7 +517,15 @@ h2.titrehotel {
   border-radius: 1rem 1rem 1rem 1rem;
 }
 
-@media all AND (max-width:480px){
+.imagelongue {
+  height: 94%;
+}
+
+.imagemoyenne {
+  height: 89%;
+}
+
+@media all AND (max-width:1025px){
   .conteneurgrid {
     display: flex;
     flex-wrap: wrap;
@@ -484,7 +569,7 @@ footer {
   grid-column: 3 / 4;
 }
 
-@media all AND (max-width:480px){
+@media all AND (max-width:1025px){
   footer {
     display: flex;
     flex-wrap: wrap;
