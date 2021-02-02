@@ -305,34 +305,6 @@ article.tableaupopulaire {
   margin-left: 1rem;
 }
 
-@media all AND (max-width:480px){
-  section.Hebergement {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  article.tableauhebergement {
-    width: 80%;
-  }
-  article.tableaupopulaire {
-    width: 80%;
-    margin-left: 25px;
-  }
-}
-
-@media all AND (min-width: 480px) and (max-width: 1025px){
-  section.Hebergement {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  article.tableauhebergement {
-    width: 50%;
-  }
-  article.tableaupopulaire {
-    width: 80%;
-    margin-left: 25px;
-  }
-}
-
 .etoiles {
   font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: bold;
@@ -437,6 +409,39 @@ h2.lespluspopulaires::after {
   left: 100rem;
 }
 
+@media all AND (max-width: 1023px){
+  section.Hebergement {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+  article.tableauhebergement {
+    width: 90%;
+    margin-bottom: 25px;
+  }
+  article.tableaupopulaire {
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+  .imagehebergement {
+    width: 95%;
+  }
+}
+
+@media all AND (max-width: 1025px){
+  article.tableaupopulaire {
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+  .imagehebergement {
+    width: 95%;
+  }
+}
+
 .activite {
   margin-bottom: 50px;
 }
@@ -535,7 +540,7 @@ h2.lespluspopulaires::after {
     height: 200px;
   }
   .artactivite {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     width: 100%;
   }
 }
