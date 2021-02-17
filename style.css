@@ -7,12 +7,14 @@ html {
 
 body {
   font-family: 'Raleway', 'Calibri', Sans serif, monospace;
-  margin: 0 auto;
   max-width: 1440px;
   padding: 0 2rem;
   box-sizing: border-box;
 }
 
+.margin {
+  margin: 0 auto;
+}
 
 .header {
   grid-template-columns: auto 1fr auto auto;
@@ -52,9 +54,12 @@ body {
   text-align: center;
   padding: 2rem;
   font-weight: 500;
+  text-decoration: none;
+}
+
+.headernavlien1 {
   border-top: 3px blue ;
   border-top-style: solid;
-  text-decoration: none;
 }
 
 @media all and (max-width: 1025px) {
@@ -69,7 +74,6 @@ body {
   .headernavlien2 {
     width: 100%;
     border-top: none;
-    border-bottom: 3px solid #0065FC;
     grid-area: 2 / 2 / 3 / 3;
   }}
 
@@ -109,7 +113,7 @@ body {
 }
 
 .rechercheformdemandeinput {
-  background-color: blue;
+  background-color: #0065FC;
   color: white;
   font-weight: bold;
   border: none;
@@ -166,7 +170,7 @@ a.recherchefiltresfiltre {
   font-weight: bold;
   font-size: 20px;
   border: 2px solid #d9d9d9;
-  width: fit-content;
+  width: 185px;
   padding: 0 0.5rem;
   border-radius: 1.5rem;
   align-items: center;
@@ -176,6 +180,7 @@ a.recherchefiltresfiltre {
   margin-top: 1rem;
   text-decoration: none;
   color: black;
+  max-width: 185px;
 }
 
 a.recherchefiltresfiltre:hover {
@@ -212,9 +217,6 @@ a.recherchefiltresfiltre::before{
 
 .animaux::before {
   content: "\f6d3";
-}
-.animaux {
-  width: 100%;
 }
 
 .rechercheresultattext::before {
@@ -361,7 +363,7 @@ p.afficherplus {
   padding-bottom: 10px;
 }
 
-h4.titrehotel {
+h3.titrehotel {
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 0;
@@ -399,6 +401,7 @@ p.phrasehotel {
 h2.lespluspopulaires {
   display: flex;
   width: 100%;
+  margin-left: 1.3rem;
 }
 
 h2.lespluspopulaires::after {
@@ -407,6 +410,7 @@ h2.lespluspopulaires::after {
   color: black;
   position: sticky;
   left: 100rem;
+  margin-right: 2rem;
 }
 
 @media all AND (max-width: 1023px){
@@ -417,6 +421,7 @@ h2.lespluspopulaires::after {
   }
   article.tableauhebergement {
     width: 90%;
+    max-width: 425px;
     margin-bottom: 25px;
   }
   article.tableaupopulaire {
@@ -432,13 +437,14 @@ h2.lespluspopulaires::after {
 
 @media all AND (max-width: 1025px){
   article.tableaupopulaire {
-    width: 95%;
     margin-left: 10px;
     margin-top: 25px;
     margin-bottom: 0;
+    max-width: 500px;
   }
   .imagehebergement {
     width: 95%;
+    max-width: 400px;
   }
 }
 
@@ -530,7 +536,7 @@ h2.lespluspopulaires::after {
   height: 89%;
 }
 
-@media all AND (max-width:1025px){
+@media all AND (max-width:1360px){
   .conteneurgrid {
     display: flex;
     flex-wrap: wrap;
@@ -542,6 +548,7 @@ h2.lespluspopulaires::after {
   .artactivite {
     margin-bottom: 25px;
     width: 100%;
+    max-width: 905px;
   }
 }
 
