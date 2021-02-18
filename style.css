@@ -8,6 +8,7 @@ html {
 body {
   font-family: 'Raleway', 'Calibri', Sans serif, monospace;
   box-sizing: border-box;
+  margin: 0;
 }
 
 div.wrapper {
@@ -567,6 +568,7 @@ footer {
   color: black;
   display: grid;
   margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 .footercolonne1 {
@@ -579,6 +581,10 @@ footer {
 
 .footercolonne3 {
   grid-column: 3 / 4;
+}
+
+.apropos {
+  margin-left: 10px;
 }
 
 @media all AND (max-width:1025px){
