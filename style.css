@@ -175,13 +175,13 @@ a.recherchefiltresfiltre {
   padding: 0 0.5rem;
   border-radius: 1.5rem;
   align-items: center;
-  margin-left: 0;
   margin-right: 1.5rem;
   display: flex;
   margin-top: 1rem;
   text-decoration: none;
   color: black;
   max-width: 185px;
+  margin-left: 15px;
 }
 
 a.recherchefiltresfiltre:hover {
@@ -202,6 +202,7 @@ a.recherchefiltresfiltre::before{
   padding: 0.5rem 0.5rem;
   margin-left: -1rem;
   display: flex;
+  margin-right: 10px;
 }
 
 .economique::before {
