@@ -7,13 +7,13 @@ html {
 
 body {
   font-family: 'Raleway', 'Calibri', Sans serif, monospace;
-  padding: 0 2rem;
   box-sizing: border-box;
 }
 
 div.wrapper {
   margin: 0 auto;
   max-width: 1440px;
+  padding: 0 2rem;
 }
 
 .header {
@@ -555,7 +555,6 @@ h2.lespluspopulaires::after {
 
 footer {
   background-color: #F2F2F2;
-  width: 100%;
 }
 
 .conteneurgridfooter {
